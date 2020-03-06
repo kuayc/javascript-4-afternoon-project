@@ -2,12 +2,9 @@
   Once you complete a problem, refresh ./classes.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
-
   You can refresh the page at any time to re-run all the tests.
-
   Classes are a tool for building similar objects over and over again.
   They are a construct that helps your organize your code.
-
   Let's work with some employees at a company.
   You work for Widget Co. They have hundreds of employees.
 */
@@ -23,17 +20,30 @@
     - age
   Each employee has the following methods:
     - makeWidget
-      - This returns a string equal to the employees first name + last name + the word widget
+      - This returns a string equal to the employees first name + 
+      last name + the word widget
       - Example: "Dave Smith Widget"
 
-  Call your class Employee and receive all the data in the constructor in the order listed above.
+  Call your class Employee and receive all the data in the constructor 
+  in the order listed above.
 */
-
 //Code Here
+class Employees {
+  constructor(first_name, last_name, email, age) {
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
+  function makeWidget () {
+    return this.first_name + this.last_name + 'Widget'
+  }
+}
 
+let employee = new Employee ('Simon', 'Yam', 'anyone@anywhere.com', 40);
+makeWidget ();
 
 ////////// PROBLEM 2 //////////
-
 /*
   Next, make a manager for Widget Co. that extends Employee
   Each manager has all of the same properties as an employee with the following additional properties:
@@ -43,37 +53,30 @@
       - Accepts a new employee as a parameter and pushes it to their list of reports.
     - fire (index)
       - Fire removes employees from their list of reports at the given index
-
   Call your new class Manager
 */
 
 //Code Here
 
-
 ////////// PROBLEM 3 //////////
-
 /*
   Managers for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
   create a class ProgressiveManager that extends Manager.  A Progressive Manager has all of the same properties as a manager with the following additional properties:
     - title - default 'Not a manager'
     - bonus - default 0
-
-  When employees are hired or fired, the manager's title should be updated based on the number of reports.
+  When employees are hired or fired, the manager's title should be 
+  updated based on the number of reports.
     0 reports : Not a manager
     1-3 reports : Barely Manager
     4-10 reports : Mostly Manager
     11-50 reports : Manager
     51-100 reports : Manager Plus
     101+ reports : Bestest Manager
-
   Everytime they fire an employee they get $100 added to their bonus.
-
   Call your new class ProgressiveManager
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
@@ -99,5 +102,3 @@
 */
 
 //Code Here
-
-
