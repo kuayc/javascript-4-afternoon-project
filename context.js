@@ -32,14 +32,12 @@ let user = {
 */
 class Animal {
   constructor(name, species, food) {
-    this.name = name;
-    this.species = species;
-    this.food = food;
+    this.name = name
+    this.species = species
+    this.food = food
   }
   eat() {
-    return (
-      this.name + " is a " + this.species + " and likes to eat " + this.food
-    );
+    return this.name + " is a " + this.species + " and likes to eat " + this.food;
   }
 }
 //Code Here
@@ -49,7 +47,7 @@ let animal1 = new Animal("rabbit", "mammal", "grass");
   Use the bind method to assign context of the "this" keyword in the sayHi function to the user object; and save the bound function to a variable named whoSaysHi.  
 */
 function sayHi(greeting) {
-  return this.name + " says " + greeting;
+  return this.name + " says " + greeting
 }
 let who = {
   name: "Scuba Steve",
@@ -57,7 +55,7 @@ let who = {
   location: "Belize"
 };
 //Code Here
-
+let whoSaysHi = sayHi.bind(who);
 ////////// PROBLEM 4 //////////
 
 /*
@@ -72,7 +70,7 @@ function whatIsThis() {
 
 // uncomment the line below and tell us what the context of "this"
  is for whatIsThis()
-let context1 = 'global';
+let context1 = window;
 
 let product = {
   name: "snake plant",
@@ -83,7 +81,7 @@ let product = {
 let func = whatIsThis.bind(product);
 
 uncomment the line below and tell us what the context of "this" is when we invoke func
-let context2 = 'product'; 
+let context2 = product; 
 
 let vacation = {
   location: "Hawaii",
@@ -95,7 +93,7 @@ let vacation = {
 
 // uncomment the line below and tell us what the context of "this" is 
 when we invoke vacation.whatIsThis
-let context3 = 'whatIsThis'
+let context3 = vacation;
 
 class Family {
   constructor(numParents, numKids, numPets) {
@@ -113,4 +111,4 @@ let family1 = new Family(2, 4, 1);
 
 // uncomment the line below and tell us what the context of "this" is for 
 the instance of Family created above.
-let context4 = 'family1'
+let context4 = family1;
